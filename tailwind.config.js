@@ -1,49 +1,27 @@
 module.exports = {
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    darkMode: "class", // or 'media' or 'class'
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
-            screens : {
-                'md' : '425px',
-                'lg' : '768px'
+            animation: {
+                wiggle: 'wiggle 1s ease-in-out ',
+                wiggle_reverse:'wiggle_reverse 0.3s ease-in'
             },
-            colors : {
-                'sky-blue' : '#0079FF',
-                'light-grey' : '#697C9A',
-                'navy-blue' : '#4B6A9B',
-                'dark-grey' : '#2B3442',
-                'snow' : '#F6F8FF',
-                'slight-dark-white' : '#FEFEFE',
-                'dark-mode-bg' : 'hsl(220, 40%, 13%)',
-                'dark-blue' : '#1E2A47',
-                'dark-white' : '#F6F8FF',
-            },
-            fontFamily : {
-                'Space-Mono' : ['"Space Mono"' , 'monospace'],
-            },
-            fontSize : {
-                'mobile-title' : '26px',
-            },
-            spacing : {
-                'mob-search' : '327px',
-                'mob-profile' : '75px',
-                'tablet-profile' : '117px'
-            },
-            maxWidth : {
-                'mob-search' : '327px',
-                'md-width' : '573px'
-            },
-            height : {
-                'mob-container' : '517px'
+
+            keyframes: {
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-60deg)' },
+                    '50%': { transform: 'rotate(60deg)' },
+                },
+                wiggle_reverse:{
+                    '0%': { transform: 'rotate(90deg)' },
+                    '100%': { transform: 'rotate(0deg)' },
+                }
             }
         },
     },
-    variants: {
-        extend: {
-            display : ['dark'],
-            fill : ['hover' , 'focus'],
-            cursor : ['hover' , 'focus']
-        },
-    },
+    darkMode:"class",
     plugins: [],
 }

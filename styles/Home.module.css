@@ -1,7 +1,7 @@
 .container {
-  padding: 0 2rem;
-}
+  /*padding: 0 2rem;*/
 
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -16,7 +16,8 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #12ab9d;
+  background-color: #113d72;
   justify-content: center;
   align-items: center;
 }
@@ -41,8 +42,8 @@
 
 .title {
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  line-height: 3.15;
+  font-size: 2.5rem;
 }
 
 .title,
