@@ -39,7 +39,7 @@ function DrawerAppBar(props) {
                 <ListItem disablePadding>
                     <ListItemButton sx={{textAlign: 'center'}}>
                         <Link href="/">
-                            <ListItemText className={currentRoute === "/" ? "active" : "non-active"} primary='Home'/>
+                            <ListItemText  primary='Home'/>
                         </Link>
                     </ListItemButton>
                 </ListItem>
@@ -47,7 +47,7 @@ function DrawerAppBar(props) {
                 <ListItem disablePadding>
                     <ListItemButton sx={{textAlign: 'center'}}>
                         <Link href="/Login">
-                            <ListItemText className={currentRoute === "/Login" ? "active" : "non-active"} primary='Login'/>
+                            <ListItemText  primary='Login'/>
                         </Link>
                     </ListItemButton>
                 </ListItem>
