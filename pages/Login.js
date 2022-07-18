@@ -1,8 +1,4 @@
 import NavBar from "../components/navbar/nav-bar";
-import Image from "next/image";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import * as React from "@types/react";
 
 export default function Login(props) {
 
@@ -16,5 +12,6 @@ export default function Login(props) {
         </>
     )
 }
+
 
 

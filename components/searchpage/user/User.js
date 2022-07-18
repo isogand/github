@@ -20,7 +20,7 @@ const User = (props) => {
                         imageURL={props.data.avatar_url}
                     />
 
-                    <div className=" flex w-full md:max-w-lg flex-col space-y-6 px-6 py-3">
+                    <div className=" flex w-full md:max-w-lg flex-col space-y-6 px-6 py-9">
                         <UserStats
                             repos={props.data.public_repos}
                             followers={props.data.followers}
