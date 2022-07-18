@@ -68,7 +68,6 @@ export default function Search() {
                 <Snackbar
                     open={open}
                     autoHideDuration={6000}
-                    // onClose={handleClose}
                     message="User not found 😔 "
                     action={action}
                 />
@@ -78,28 +77,23 @@ export default function Search() {
 
     const onChange = e => setUser(e.target.value);
     let view;
+    const children = <>
+        <Searchbar
+            user={user}
+            handleClick={handleClick}
+            userRef={userRef}
+            onChange={onChange}
+        />
+        <User data={data}/>
+    </>
     if (error) {
         view = <>
-            <Searchbar
-                user={user}
-                handleClick={handleClick}
-                userRef={userRef}
-                // handleKeyPress={handleKeyPress}
-                onChange={onChange}
-            />
-            <User data={data}/>
+            {children}
             <Error/>
         </>
     } else {
         view = <>
-            <Searchbar
-                user={user}
-                handleClick={handleClick}
-                userRef={userRef}
-                // handleKeyPress={handleKeyPress}
-                onChange={onChange}
-            />
-            <User data={data}/>
+            {children}
         </>
     }
 
