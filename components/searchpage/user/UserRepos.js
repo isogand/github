@@ -80,7 +80,8 @@ export default function UserRepos({repos}) {
                     sx={{
                         ul: {
                             "& .MuiPaginationItem-root": {
-                                color: "#fff"
+                                color: "#fff",
+                                borderColor: '#e8eaf6'
                             }
                         }
                     }}
