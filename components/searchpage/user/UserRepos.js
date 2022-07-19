@@ -19,7 +19,7 @@ export default function UserRepos({repos}) {
 
     useEffect(() => {
         if (!user) return;
-        axios(`https://api.github.com/users/${user}/repos?page=${page}&per_page=6`)
+        axios(`https://api.github.com/users/${user}/repos?page=${page}&per_page=6&direction={direction}&sort={sort}`)
             .then((response) => {
                 setData(response.data);
             })
@@ -32,17 +32,17 @@ export default function UserRepos({repos}) {
             <h1 className=" h-9 text-2xl  justify-center text-white flex">Repositories</h1>
             <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 {data?.map((value,index) => (
-                    <div className="flex-row flex">
+                    <div key={index} className="flex-row flex">
                         <div
                             className="flex p-5 px-4 m-2 rounded-lg border border-neutral-500  items-center w-full justify-around md:text-left md:flex-1 md:items-start md:justify-between">
                             <Box sx={{flexGrow: 1}}>
                                 <Stack>
                                     <Grid container spacing={2} className="text-white">
                                         <Grid item xs>
-                                            <div key={index} className="text-white text-xl">{value.name}</div>
+                                            <div  className="text-white text-xl">{value.name}</div>
                                         </Grid>
                                         <Grid item xs display={"flex"} flexDirection={"column"} alignItems="flex-end">
-                                            <div key={index}
+                                            <div
                                                 className="bg-gray-500  rounded-lg text-center w-16 mb-3">{value.visibility}</div>
                                         </Grid>
                                     </Grid>
@@ -52,7 +52,7 @@ export default function UserRepos({repos}) {
                                                 value.language && (
                                                     <>
                                                         <div className="flex h-2 w-2 rounded-full bg-red-400 "/>
-                                                        <div key={index} className="text-zinc-500 ml-2 -mt-2">{value.language}</div>
+                                                        <div  className="text-zinc-500 ml-2 -mt-2">{value.language}</div>
                                                     </>
                                                 )
                                             }
@@ -62,7 +62,7 @@ export default function UserRepos({repos}) {
                                                   justifyContent="flex-end">
                                                 <Grid className="text-sm text-gray-500" item xs={2}
                                                       md={3}><StarBorderIcon/></Grid>
-                                                <Grid key={index} className="text-lg text-gray-500 ml-2"
+                                                <Grid className="text-lg text-gray-500 ml-2"
                                                       item>{value.stargazers_count}</Grid>
                                             </Grid>
                                         </Grid>
