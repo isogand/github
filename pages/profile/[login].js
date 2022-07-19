@@ -4,6 +4,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import UserProfile from "../../components/searchpage/user/UserProfile";
 import UserStats from "../../components/searchpage/user/UserStats";
+import UserRepos from "../../components/searchpage/user/UserRepos";
 
 
 export default function Profile() {
@@ -40,6 +41,7 @@ export default function Profile() {
                         bio = {data?.bio}
                         blog = {data?.blog}
                     />
+                    <UserRepos  repos={data?.public_repos}/>
                 </div>
             </div>
         </>

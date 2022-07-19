@@ -75,7 +75,9 @@ export default function Search() {
                         setUser(userRef.current.value);
                     }}
                 />
-                <User data={data}/>
+                {data && (
+                    <User data={data}/>
+                )}
             </>
             <Error error={error} setError={setError}/>
         </div>

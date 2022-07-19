@@ -1,5 +1,4 @@
 import React from 'react'
-import ListItemText from "@mui/material/ListItemText";
 import Link from "next/link";
 
 const UserStats = ({repos, followers, following, bio, blog}) => {
@@ -13,7 +12,7 @@ const UserStats = ({repos, followers, following, bio, blog}) => {
                     </h2>
 
                 </div>
-                {blog ? (
+                {blog &&
                     <div
                         className="flex items-center w-full justify-around ml-8  px-2 text-center md:text-left md:flex-1 md:items-start md:justify-between">
                         <h2 className=" font-mono text-white dark:text-gray-50">
@@ -24,7 +23,7 @@ const UserStats = ({repos, followers, following, bio, blog}) => {
                         </h2>
 
                     </div>
-                ) : null
+
                 }
             </div>
 

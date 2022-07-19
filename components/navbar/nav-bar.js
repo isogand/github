@@ -12,7 +12,6 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Link from "next/link";
 import {useRouter} from "next/router";
 import styles from './nav-bar.module.css';
@@ -44,13 +43,13 @@ function DrawerAppBar(props) {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem disablePadding>
-                    <ListItemButton sx={{textAlign: 'center'}}>
-                        <Link href="/Profile">
-                            <ListItemText  primary='Profile'/>
-                        </Link>
-                    </ListItemButton>
-                </ListItem>
+                {/*<ListItem disablePadding>*/}
+                {/*    <ListItemButton sx={{textAlign: 'center'}}>*/}
+                {/*        <Link href="/Profile">*/}
+                {/*            <ListItemText  primary='Profile'/>*/}
+                {/*        </Link>*/}
+                {/*    </ListItemButton>*/}
+                {/*</ListItem>*/}
             </List>
         </Box>
     );
@@ -89,15 +88,15 @@ function DrawerAppBar(props) {
                             </ListItemButton>
                         </ListItem>
                     </Box>
-                    <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-                        <ListItem disablePadding>
-                            <ListItemButton sx={{textAlign: 'center'}}>
-                                <Link href="/Profile">
-                                  <ListItemText className={currentRoute === "/Profile" ? "active" : "non-active"} primary='Profile'/>
-                                </Link>
-                            </ListItemButton>
-                        </ListItem>
-                    </Box>
+                    {/*<Box sx={{display: {xs: 'none', sm: 'block'}}}>*/}
+                    {/*    <ListItem disablePadding>*/}
+                    {/*        <ListItemButton sx={{textAlign: 'center'}}>*/}
+                    {/*            <Link href="/Profile">*/}
+                    {/*              <ListItemText className={currentRoute === "/Profile" ? "active" : "non-active"} primary='Profile'/>*/}
+                    {/*            </Link>*/}
+                    {/*        </ListItemButton>*/}
+                    {/*    </ListItem>*/}
+                    {/*</Box>*/}
                 </Toolbar>
             </AppBar>
             <Box component="nav">
