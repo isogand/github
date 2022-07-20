@@ -4,16 +4,15 @@ This is a [Next.js](https://nextjs.org/) project ❤️
 ![](https://i.ibb.co/cXD0XPK/Screenshot-from-2022-07-20-10-30-16.png)
 ![](https://i.ibb.co/YRb2k0G/Screenshot-from-2022-07-20-10-30-38.png)
 
-## Install and run
+## Installation
 
-First 
 ```bash
 npm install
 # or
 yarn install
 ```
 
-after run the development server:
+## Usage
 
 ```bash
 npm run dev
